@@ -31,7 +31,7 @@ class CarModel(models.Model):
     ]
 
     car_make = models.ForeignKey(
-        CarMake, 
+        CarMake,
         on_delete=models.CASCADE,
         related_name='models'
     )

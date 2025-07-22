@@ -29,7 +29,7 @@ SECRET_KEY =\
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1', 
+    '127.0.0.1',
     'localhost',
     (
         'https://vetrivignesh-8000.theiadockernext-1-labs-prod-theiak8s-4-'
@@ -106,7 +106,10 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        (
+            'django.contrib.auth.password_validation.',
+            'UserAttributeSimilarityValidator'
+        ),
     },
     {
         'NAME':
