@@ -30,8 +30,11 @@ class CarModel(models.Model):
         (CONVERTIBLE, 'Convertible'),
     ]
 
-    car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE,
-        related_name='models')
+    car_make = models.ForeignKey(
+        CarMake, 
+        on_delete=models.CASCADE,
+        related_name='models'
+    )
     name = models.CharField(max_length=100)
     type = models.CharField(max_length=20, choices=CAR_TYPES)
     year = models.IntegerField(validators=[
